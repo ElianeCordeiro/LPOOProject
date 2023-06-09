@@ -1,2 +1,2 @@
-# LPOOProject
-Projeto de LPOO - IFPE 
+# Projeto me Linguagem de Porgramação Orientada a Objetos 
+IFPE Garanhuns, 2023   
