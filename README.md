@@ -1,2 +1,2 @@
-# Projeto me Linguagem de Porgramação Orientada a Objetos 
+# Projeto de Linguagem de Programação Orientada a Objetos 
 IFPE Garanhuns, 2023   
