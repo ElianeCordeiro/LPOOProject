@@ -23,5 +23,8 @@ public class Pedido {
 	
 	public void confirmarPagamento(boolean pagamento) throws PagamentoNaoConfirmadoException {
 		this.pago = pagamento;
+		if (pagamento == false) {
+			throw new PagamentoNaoConfirmadoException();
+		}
 	}
 }
