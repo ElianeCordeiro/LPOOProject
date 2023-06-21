@@ -8,6 +8,7 @@ public abstract class Produto {
 	private double precoProduto;
 	private String nomeProduto;
 	private Fornecedor fornecedor;
+	
 	public Produto(String dataValidade, double precoProduto, String nomeProduto, Fornecedor fornecedor) {
 		super();
 		this.dataValidade = dataValidade;
@@ -15,6 +16,7 @@ public abstract class Produto {
 		this.nomeProduto = nomeProduto;
 		this.fornecedor = fornecedor;
 	}
+	
 	public String getDataValidade() {
 		return dataValidade;
 	}
