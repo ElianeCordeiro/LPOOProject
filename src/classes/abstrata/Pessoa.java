@@ -7,8 +7,7 @@ public abstract class Pessoa {
 	private String telefone;
 	private String cpf_CNPJ;
 	
-	
-	
+
 	public Pessoa(String nome, String enderecoCidade, String telefone, String cpf_CNPJ) {
 		super();
 		this.nome = nome;
