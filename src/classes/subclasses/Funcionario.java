@@ -46,8 +46,7 @@ public class Funcionario extends Pessoa{
 
 	@Override
 	public String toString() {
-		return "Funcionario:"
-				+ "\nCargo: " + cargo + "\nSalário: " + salario + "\nSetor: " + setor;
+		return "Nome: " + this.getNome() + " " ;
 	}
 	
 	
