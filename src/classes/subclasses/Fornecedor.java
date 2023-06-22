@@ -35,8 +35,8 @@ public class Fornecedor extends Pessoa{
 
 	@Override
 	public String toString() {
-		return "Fornecedor: "
-				+ "\nTipo Produto: " + tipoProduto + 
+		return "Fornecedor: " + this.getNome() +
+				"\nTipo Produto: " + tipoProduto + 
 				"\nSetores: " + setores;
 	}
 	
