@@ -41,6 +41,12 @@ public abstract class Produto {
 	public void setFornecedor(Fornecedor fornecedor) {
 		this.fornecedor = fornecedor;
 	}
+
+	@Override
+	public String toString() {
+		return "Data Validade: " + dataValidade + "\nPreco Produto: " + precoProduto + "\nNome Produto:"
+				+ nomeProduto;
+	}
 	
 	
 

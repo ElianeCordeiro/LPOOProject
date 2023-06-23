@@ -6,16 +6,13 @@ import classes.abstrata.Produto;
 import classes.exceptions.PagamentoNaoConfirmadoException;
 
 public class Pedido {
-	private int data;
-	private int id;
+	private String data;
 	private Setor setor;
 	private Cliente cliente;
 	private ArrayList<Produto> listaProdutos;
-	private boolean pago;
 	
-	public Pedido(int data, int id, Setor setor, Cliente cliente, ArrayList<Produto> listaProdutos) {
+	public Pedido(String data, Setor setor, Cliente cliente, ArrayList<Produto> listaProdutos) {
 		this.data = data;
-		this.id = id;
 		this.setor = setor;
 		this.cliente = cliente;
 		this.listaProdutos = listaProdutos;
@@ -28,20 +25,12 @@ public class Pedido {
 			return "O pagamento foi efetuado pelo cliente";
 	}
 
-	public int getData() {
+	public 	String getData() {
 		return data;
 	}
 
-	public void setData(int data) {
+	public void setData(String data) {
 		this.data = data;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public Setor getSetor() {
@@ -68,22 +57,13 @@ public class Pedido {
 		this.listaProdutos = listaProdutos;
 	}
 
-	public boolean isPago() {
-		return pago;
-	}
-
-	public void setPago(boolean pago) {
-		this.pago = pago;
-	}
 
 	@Override
 	public String toString() {
 		return "Pedido:"
 				+ "\nData:" + data + 
-				"\nId: " + id + 
-				"Setor: " + setor + 
-				"\nCliente:" + cliente + 
-				"Pago: " + pago;
+				"\nSetor: " + setor.toString() + 
+				"\nCliente:" + cliente.toString();
 	}
 	
 	

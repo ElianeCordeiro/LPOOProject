@@ -32,9 +32,9 @@ public class ProdutoAlimento extends Produto{
 
 	@Override
 	public String toString() {
-		return "ProdutoAlimento: "
-				+ "\nTemperatura Ideal: " + temperaturaIdeal + 
-				"\nLocal Armazenamento: " + localArmazenamento;
+		return super.toString();
 	}
+
+	
 	
 }

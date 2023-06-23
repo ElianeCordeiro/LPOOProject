@@ -27,6 +27,11 @@ public class Setor {
 		return "Fornecedor contratado com sucesso.";
 	}
 	
+	public String contratarFuncionario(Funcionario funcionario) {
+		this.funcionarios.add(funcionario);
+		return "Funcionario contratado com sucesso. ";
+	}
+	
 	public String demitirFuncionario(String cpfFuncionario) {
 		for (Funcionario funcionario : funcionarios) {
 			if(funcionario.getCpf_CNPJ().equals(cpfFuncionario)) {
@@ -36,7 +41,7 @@ public class Setor {
 		return "O funcionario foi demitido com sucesso."; 
 	}
 	
-	public String pagarSalarioDosFuncionarios(double salario) throws SalarioNaoValidoException {
+	public String pagarSalarioDoFuncionario(double salario) throws SalarioNaoValidoException {
 		if(salario <=0 ) {
 			throw new SalarioNaoValidoException("O valor informado não é válido");
 		} else 
@@ -86,8 +91,8 @@ public class Setor {
 
 	@Override
 	public String toString() {
-		return "Dados do Setor:"
-				+ " Codigo Setor: " + codigoSetor + 
+		return "\nDados do Setor:"
+				+ "\nCodigo Setor: " + codigoSetor + 
 				"\nNome Setor: " + nomeSetor + 
 				"\nQuantidade Funcionario:" + funcionarios.size() ;
 	}
