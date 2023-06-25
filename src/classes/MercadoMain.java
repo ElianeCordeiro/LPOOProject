@@ -151,11 +151,13 @@ public class MercadoMain {
 						} else if (comando_setor == 4) {
 							System.out.println("Digite o CPF do funcionario que deseja demitir: ");
 							cpf = sc.nextLine();
+							Funcionario demitir = null;
 							for (Funcionario f : funcionarios) {
 								if(f.getCpf_CNPJ().equals(cpf)) {
-									setor.demitirFuncionario(cpf);
+									demitir = f;
 								} 
 							}
+							funcionarios.remove(demitir);
 						} 
 						
 					} catch (InputMismatchException e) {

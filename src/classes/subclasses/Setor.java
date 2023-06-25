@@ -33,7 +33,7 @@ public class Setor {
 	}
 	
 	public String demitirFuncionario(String cpfFuncionario) {
-		for (Funcionario funcionario : funcionarios) {
+		for (Funcionario funcionario : this.funcionarios) {
 			if(funcionario.getCpf_CNPJ().equals(cpfFuncionario)) {
 				funcionarios.remove(funcionario);
 			}
