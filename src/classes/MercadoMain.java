@@ -126,7 +126,7 @@ public class MercadoMain {
 							
 							produtoAlimento = new ProdutoAlimento(dataValidade, preco, nome, fornecedor, temperaturaIdeal, localArmazenamento);
 							fornecedor.setTipoProduto(produtoAlimento);
-							fornecedores.add(fornecedor);
+							///fornecedores.add(fornecedor);
 							setor.contratarFornecedor(fornecedor);
 							
 						} else if (comando_setor == 3) {
@@ -146,7 +146,7 @@ public class MercadoMain {
 							
 							funcionario = new Funcionario(nome, cidade, telefone, cpf, cargo, salario, setor);
 							setor.contratarFuncionario(funcionario);
-							funcionarios.add(funcionario);
+							///funcionarios.add(funcionario);
 						
 						} else if (comando_setor == 4) {
 							System.out.println("Digite o CPF do funcionario que deseja demitir: ");
