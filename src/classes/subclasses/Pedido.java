@@ -19,7 +19,7 @@ public class Pedido {
 	}
 	
 	public String confirmarPagamento(boolean pagamento) throws PagamentoNaoConfirmadoException {
-		if(this.cliente.realizarPagamentoPedido(pagamento) == false) {
+		if(this.cliente.realizarPagamentoPedido(pagamento)) {
 			throw new PagamentoNaoConfirmadoException("O pagamento não foi confirmado");
 		} else	
 			return "O pagamento foi efetuado pelo cliente";
@@ -62,7 +62,7 @@ public class Pedido {
 	public String toString() {
 		return "Pedido:"
 				+ "\nData:" + data + 
-				"\nSetor: " + setor.toString() + 
+				"\nSetor: " + setor.getNomeSetor() + 
 				"\nCliente:" + cliente.toString();
 	}
 	

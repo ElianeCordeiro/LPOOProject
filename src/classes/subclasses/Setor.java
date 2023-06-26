@@ -3,8 +3,9 @@ package classes.subclasses;
 import java.util.ArrayList;
 
 import classes.exceptions.SalarioNaoValidoException;
+import interfaces.Pagamento;
 
-public class Setor {
+public class Setor implements Pagamento{
 	
 	private int codigoSetor;
 	private String nomeSetor;
@@ -41,11 +42,12 @@ public class Setor {
 		return "O funcionario foi demitido com sucesso."; 
 	}
 	
-	public String pagarSalarioDoFuncionario(double salario) throws SalarioNaoValidoException {
+	@Override
+	public boolean realizarPagamento(double salario) throws SalarioNaoValidoException {
 		if(salario <=0 ) {
 			throw new SalarioNaoValidoException("O valor informado não é válido");
 		} else 
-		return "Salários pagos com sucesso.";
+		return true;
 	}
 
 

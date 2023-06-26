@@ -9,8 +9,9 @@ public class Cliente extends Pessoa{
 		super(nome, enderecoCidade, telefone, cpf_CNPJ);
 	}
 	
+	
 	public boolean realizarPagamentoPedido(boolean pagar) throws PagamentoNaoConfirmadoException{
-		if(pagar == false) {
+		if(pagar == false  ) {
 			throw new PagamentoNaoConfirmadoException("Pagamento não efetuado");
 		}
 		return true;

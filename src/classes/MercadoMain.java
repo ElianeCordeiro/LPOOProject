@@ -95,7 +95,7 @@ public class MercadoMain {
 								if(cpf.equals(f.getCpf_CNPJ())) {
 									System.out.println("Digite o valor a ser pago. ");
 									salario = sc.nextDouble();
-									setor.pagarSalarioDoFuncionario(salario);
+									setor.realizarPagamento(salario);
 								}
 							}
 						} else if(comando_setor == 2) {
@@ -272,12 +272,14 @@ public class MercadoMain {
 							for (int i = 0; i < quantidade; i++) {
 								System.out.println("Digite o nome do produto que deseja comprar. ");
 								nome = sc.nextLine();
+							
 								for (Fornecedor f : fornecedores) {
 									if(nome.equalsIgnoreCase(f.getTipoProduto().getNomeProduto())) {
-										produtos.add(f.getTipoProduto());
+											produtos.add(f.getTipoProduto());
 									}
 								}
 							}
+							
 							
 							pedido = new Pedido(data, setor, cliente, produtos);
 							pedidos.add(pedido);
@@ -292,7 +294,7 @@ public class MercadoMain {
 							cpf = sc.nextLine();
 							for (Pedido pedido2 : pedidos) {
 								if(cpf.equals(pedido2.getCliente().getCpf_CNPJ())) {
-									System.out.println("Confirma o pagamento? true/false");
+									System.out.println("Você deseja confirmar o pagamento do pedido?" );
 									boolean pagamento = sc.nextBoolean();
 									pedido2.confirmarPagamento(pedido.getCliente().realizarPagamentoPedido(pagamento));
 								}
