@@ -184,7 +184,7 @@ public class MercadoMain {
 							chave_funcionario = false;
 						} else if (comando_funcionario == 1) {
 							System.out.println("Funcionarios:");
-							for (Funcionario i : funcionarios) {
+							for (Funcionario i : setor.getFuncionarios()) {
 								System.out.println(i.toString());
 							}
 						} else {
